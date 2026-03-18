@@ -295,6 +295,9 @@ set(SOURCES
     src/screens/algo_trading/algo_trading_screen.cpp
     src/screens/algo_trading/algo_service.cpp
 
+    # Screens — ADW Mission Control
+    src/screens/adw_mission_control/adw_mission_control_screen.cpp
+
     # Trading — Unified Trading
     src/trading/unified_trading.cpp
 

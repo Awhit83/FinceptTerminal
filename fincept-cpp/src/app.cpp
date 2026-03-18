@@ -141,6 +141,7 @@ void App::render_top_bar() {
             if (ImGui::MenuItem("Portfolio", "F4"))         { active_tab_ = 3; }
             if (ImGui::MenuItem("Backtesting", "F5"))       { active_tab_ = 6; }
             if (ImGui::MenuItem("Algo Trading"))            { active_tab_ = 7; }
+            if (ImGui::MenuItem("ADW Mission Control"))     { active_tab_ = 43; }
             if (ImGui::MenuItem("Surface Analytics", "F6")) { active_tab_ = 14; }
 
             ImGui::Spacing();
@@ -545,6 +546,7 @@ void App::render_command_bar() {
         {"MCP Servers",         "mcp model context protocol servers",   "Tools",      nullptr, 40},
         {"Alpha Arena",         "alpha arena ai competition trading",   "Trading",    nullptr, 41},
         {"Trade Viz",           "trade visualization flows global",     "Data",       nullptr, 42},
+        {"ADW Mission Control", "adw mission control trading bot ml signals risk", "Trading", nullptr, 43},
     };
     constexpr int n_cmds = sizeof(commands) / sizeof(commands[0]);
 
@@ -913,6 +915,7 @@ void App::render() {
             else if (active_tab_ == 40) lazy(mcp_servers_screen_).render();
             else if (active_tab_ == 41) lazy(alpha_arena_screen_).render();
             else if (active_tab_ == 42) lazy(trade_viz_screen_).render();
+            else if (active_tab_ == 43) lazy(adw_mission_control_screen_).render();
             else                        dashboard_screen_.render();
             break;
         default:

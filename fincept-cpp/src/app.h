@@ -53,6 +53,7 @@
 #include "screens/mcp_servers/mcp_servers_screen.h"
 #include "screens/alpha_arena/alpha_arena_screen.h"
 #include "screens/trade_viz/trade_viz_screen.h"
+#include "screens/adw_mission_control/adw_mission_control_screen.h"
 #include <optional>
 #include <chrono>
 
@@ -138,6 +139,7 @@ private:
     std::optional<mcp_servers::MCPServersScreen> mcp_servers_screen_;
     std::optional<alpha_arena::AlphaArenaScreen> alpha_arena_screen_;
     std::optional<trade_viz::TradeVizScreen> trade_viz_screen_;
+    std::optional<adw::ADWMissionControlScreen> adw_mission_control_screen_;
 
     // Command bar state
     char cmd_buf_[128] = {};
